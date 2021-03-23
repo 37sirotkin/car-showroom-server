@@ -10,11 +10,20 @@ app.use(express.json());
 
 app.post("/post", async (req, res) => {
     try {
-        const { mark, model, color, price, year_of_issue, id_supplier} = req.body;
+        const {mark, model, color, price, year_of_issue, id_supplier} = req.body;
         const newCar = await pool.query(
             "INSERT INTO car (mark, model, color, price, year_of_issue, id_supplier) VALUES ($1, $2, $3, $4, $5, $6) RETURNING *",
             [mark, model, color, price, year_of_issue, id_supplier]);
         res.json(newCar.rows[0]);
+    } catch (err) {
+        console.log(err.message);
+    }
+})
+
+app.get("/getCars", async (req, res) => {
+    try {
+        const cars = await pool.query("SELECT * FROM car");
+        res.json(cars.rows);
     } catch (err) {
         console.log(err.message);
     }
