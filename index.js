@@ -1,3 +1,4 @@
+const {Car} = require('./src/models/car');
 const express = require("express");
 const app = express();
 const cors = require("cors");
@@ -22,8 +23,8 @@ app.post("/post", async (req, res) => {
 
 app.get("/getCars", async (req, res) => {
     try {
-        const cars = await pool.query("SELECT * FROM car");
-        res.json(cars.rows);
+        const cars = await Car.findAll({});
+        res.json(cars.map(c => c.dataValues));
     } catch (err) {
         console.log(err.message);
     }
