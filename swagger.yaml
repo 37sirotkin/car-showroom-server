@@ -1,0 +1,61 @@
+swagger: "2.0"
+info:
+  description: "Cars API"
+  version: "1.0.0"
+  title: "Cars API"
+  contact:
+    email: "apiteam@swagger.io"
+  license:
+    name: "Apache 2.0"
+    url: "http://www.apache.org/licenses/LICENSE-2.0.html"
+host: "petstore.swagger.io"
+basePath: "/api/v1.0"
+tags:
+- name: "cars"
+  description: "Cars API"
+schemes:
+- "https"
+- "http"
+paths:
+  /cars:
+    get:
+      tags:
+      - "car"
+      summary: "Retrieve cars"
+      operationId: "findCars"
+      consumes:
+      - "application/json"
+      parameters:
+      - name: "markId"
+        in: "query"
+        description: "Filters on specified mark id"
+        required: false
+        type: integer
+      responses:
+        "200":
+          description: "successful operation"
+          schema:
+            type: "array"
+            items:
+              $ref: '#/definitions/Car'
+        "404":
+          description: "Not found"
+        "405":
+          description: "Invalid input"
+   
+definitions:
+   Car:
+    type: "object"
+    properties:
+      id:
+        type: "integer"
+      model:
+        type: "string"
+      color:
+        type: "string"
+      
+    
+  
+externalDocs:
+  description: "Find out more about Swagger"
+  url: "http://swagger.io"
