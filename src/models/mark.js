@@ -13,7 +13,7 @@ Mark.init({
 }, {
   sequelize,
   modelName: 'mark',
-  tableName: 'marks',
+  tableName: 'mark',
   createdAt: false,
   updatedAt: false
 });
