@@ -15,6 +15,7 @@ app.use(cookieParser());
  * Routes
  */
 app.use('/api/v1.0/cars', require('./routes/cars'));
+app.use('/marks', require('./routes/marks'));
 
 // catch 404
 app.use((req, res, next) => {

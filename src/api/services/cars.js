@@ -1,5 +1,6 @@
 const ServerError = require('../../lib/error');
 const {Car} = require('./../../models/car');
+const {Mark} = require('./../../models/mark');
 
 /**
  * @param {Object} options
@@ -27,4 +28,5 @@ module.exports.findCars = async (options) => {
     data: cars.map(c => c.dataValues)
   };
 };
+
 

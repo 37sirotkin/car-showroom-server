@@ -25,15 +25,15 @@
   },
   "homepage": "https://github.com/37sirotkin/car-showroom-server#readme",
   "dependencies": {
+    "bunyan": "1.5.1",
+    "cookie-parser": "1.3.5",
     "cors": "^2.8.5",
     "express": "^4.17.1",
-    "nodemon": "^2.0.7",
-    "pg": "^8.5.1",
-    "sequelize": "^6.6.2",
-    "cookie-parser": "1.3.5",
     "node-yaml-config": "0.0.3",
-    "bunyan": "1.5.1",
-	  "passport": "^0.4.1",
-    "passport-jwt": "^4.0.0"
+    "nodemon": "^2.0.7",
+    "passport": "^0.4.1",
+    "passport-jwt": "^4.0.0",
+    "pg": "^8.5.1",
+    "sequelize": "^6.6.2"
   }
 }
