@@ -16,7 +16,8 @@ User.init({
     login: DataTypes.CHAR,
     pass: DataTypes.INTEGER,
     blocked: DataTypes.BOOLEAN,
-    id_status: DataTypes.INTEGER
+    id_status: DataTypes.INTEGER,
+    birthday: DataTypes.CHAR
 }, {
     sequelize,
     modelName: 'user',
