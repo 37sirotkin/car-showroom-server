@@ -14,12 +14,13 @@ Car.init({
   color: DataTypes.CHAR,
   price: DataTypes.CHAR,
   year_of_issue: DataTypes.CHAR,
-  id_supplier: DataTypes.INTEGER
-}, { 
-  sequelize, 
-  modelName: 'car', 
-  tableName: 'car', 
-  createdAt: false, 
+  id_supplier: DataTypes.INTEGER,
+  img: DataTypes.CHAR
+}, {
+  sequelize,
+  modelName: 'car',
+  tableName: 'car',
+  createdAt: false,
   updatedAt: false
 });
 

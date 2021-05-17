@@ -4,7 +4,7 @@ const { sequelize } = require('./sequelize');
 class User extends Model {}
 
 User.init({
-    id_person: {
+    id_user: {
         primaryKey: true,
         autoIncrement: true,
         type:DataTypes.INTEGER
@@ -20,7 +20,7 @@ User.init({
 }, {
     sequelize,
     modelName: 'user',
-    tableName: 'person',
+    tableName: 'user',
     createdAt: false,
     updatedAt: false
 });
