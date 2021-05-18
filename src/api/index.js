@@ -19,6 +19,9 @@ app.use(cors());
 app.use('/api/v1.0/cars', require('./routes/cars'));
 app.use('/api/v1.0/marks', require('./routes/marks'));
 app.use('/api/v1.0/users', require('./routes/users'));
+app.use('/api/v1.0/test-drive', require('./routes/test-drives'));
+app.use('/api/v1.0/inspections', require('./routes/inspections'));
+app.use('/api/v1.0/countries', require('./routes/countries'));
 
 // catch 404
 app.use((req, res, next) => {
