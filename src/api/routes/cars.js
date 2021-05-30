@@ -2,7 +2,7 @@ const express = require('express');
 const cars = require('../services/cars');
 
 const router = new express.Router();
-
+const {ensureAuthenticated} = require('../middlewares/auth');
 
 /**
  * Retrieve cars

@@ -17,3 +17,8 @@ module.exports.findUsers = async (options) => {
   };
 };
 
+module.exports.findUser = async (userQuery) => {
+  const user =  await User.findOne({ where: userQuery });
+  return user && user.dataValues;
+};
+
