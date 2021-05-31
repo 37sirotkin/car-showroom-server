@@ -69,9 +69,10 @@ app.all('*', function(req, res, next) {
 });
 
 app.post('/api/v1.0/signup', async (req, res, next) => {
-  const {email, first_name, surname, id_status, phone, birthday} = req.user;
+  const {email, first_name, surname, id_status, phone, birthday, id_user} = req.user;
   res.json({
     user: {
+      id_user,
       email,
       firstName: first_name,
       surname: surname,
@@ -92,6 +93,7 @@ app.use('/api/v1.0/users', require('./routes/users'));
 app.use('/api/v1.0/test-drive', require('./routes/test-drives'));
 app.use('/api/v1.0/inspections', require('./routes/inspections'));
 app.use('/api/v1.0/countries', require('./routes/countries'));
+app.use('/api/v1.0/orders', require('./routes/orders'));
 
 // catch 404
 app.use((req, res, next) => {

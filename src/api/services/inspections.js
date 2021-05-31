@@ -17,3 +17,11 @@ module.exports.findInspections = async (options) => {
   };
 };
 
+module.exports.createInspections = async (options) => {
+  const inspections = await Inspections.create(options.inspections);
+  return {
+    status: 200,
+    data: inspections
+  };
+};
+

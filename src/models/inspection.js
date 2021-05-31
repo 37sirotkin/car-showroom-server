@@ -17,7 +17,9 @@ Inspection.init({
   surname: DataTypes.CHAR,
   father_name: DataTypes.CHAR,
   phone: DataTypes.CHAR,
-  email: DataTypes.CHAR
+  email: DataTypes.CHAR,
+  user_id: DataTypes.INTEGER,
+  path: DataTypes.CHAR
 
 }, {
   sequelize,
