@@ -1,14 +1,6 @@
 const ServerError = require('../../lib/error');
 const {Car} = require('./../../models/car');
-const {Mark} = require('./../../models/mark');
 
-/**
- * @param {Object} options
- * @param {Integer} options.markId Filters on specified mark id
- * @param {String} options.color Filters on specified mark id
- * @throws {Error}
- * @return {Promise}
- */
 module.exports.findCars = async (options) => {
   const where = {};
   if (!!options.markId) {
@@ -26,6 +18,14 @@ module.exports.findCars = async (options) => {
   return {
     status: 200,
     data: cars.map(c => c.dataValues)
+  };
+};
+
+module.exports.createCar = async (options) => {
+  const cars = await Car.create(options.cars);
+  return {
+    status: 200,
+    data: cars
   };
 };
 
