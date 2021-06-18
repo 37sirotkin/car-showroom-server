@@ -13,7 +13,7 @@ Order.init({
   date_of_order: DataTypes.CHAR,
   id_user: DataTypes.INTEGER,
   id_car: DataTypes.INTEGER,
-  price: DataTypes.INTEGER
+  price: DataTypes.INTEGER,
 
 }, {
   sequelize,

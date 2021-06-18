@@ -22,3 +22,11 @@ module.exports.findUser = async (userQuery) => {
   return user && user.dataValues;
 };
 
+module.exports.createUser = async () => {
+  const user = await User.create(options.user);
+  return {
+    status: 200,
+    data: user
+  };
+}
+

@@ -22,7 +22,6 @@ router.get('/', async (req, res, next) => {
 });
 
 router.post('/', async (req, res, next) => {
- console.log(req.body)
   const options = {
     cars: req.body
   };
