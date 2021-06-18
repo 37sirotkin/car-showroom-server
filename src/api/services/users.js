@@ -22,7 +22,7 @@ module.exports.findUser = async (userQuery) => {
   return user && user.dataValues;
 };
 
-module.exports.createUser = async () => {
+module.exports.createUser = async (options) => {
   const user = await User.create(options.user);
   return {
     status: 200,
